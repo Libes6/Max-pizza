@@ -7,8 +7,8 @@ function PizzaBlock(props){
   class="pizza-block__image"
   src={props.uri}
   alt="Pizza"
-  width="350"
-   height="250"
+  width="260"
+   height="260"
   />
   <h4 class="pizza-block__title">{props.name}</h4>
   <div class="pizza-block__selector">
