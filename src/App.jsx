@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Categories from './components/Categories'
 import Content from './components/Content'
 import Sort from './components/Sort'
+import pizzas from './assets/pizza.json'
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
          <Sort/>
         </div>
         <h2 class="content__title">Все пиццы</h2>
-        <Content/>
+        <Content items={pizzas}/>
       </div>
     </div>
   </div>

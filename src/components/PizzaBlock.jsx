@@ -1,16 +1,17 @@
+import React, {useState} from 'react'
 
-
-function PizzaBlock(props){
+function PizzaBlock({uri,name,mony}){
+    const [Pizzacount,setPizzacount]= useState(0)
     return(
         <div class="pizza-block">
   <img 
   class="pizza-block__image"
-  src={props.uri}
+  src={uri}
   alt="Pizza"
   width="260"
    height="260"
   />
-  <h4 class="pizza-block__title">{props.name}</h4>
+  <h4 class="pizza-block__title">{name}</h4>
   <div class="pizza-block__selector">
   <ul>
   <li>тонкое</li>
@@ -23,8 +24,8 @@ function PizzaBlock(props){
   </ul>
   </div>
   <div class="pizza-block__bottom">
-  <div class="pizza-block__price">от {props.mony} ₽</div>
-  <div class="button button--outline button--add">
+  <div class="pizza-block__price">от {mony} ₽</div>
+  <button onClick={()=>{setPizzacount(Pizzacount+1)}} class="button button--outline button--add">
   <svg
   width="12"
   height="12"
@@ -38,8 +39,8 @@ function PizzaBlock(props){
   />
   </svg>
   <span>Добавить</span>
-  <i>2</i>
-  </div>
+  <i>{Pizzacount}</i>
+  </button>
   </div>
   </div>  
     )

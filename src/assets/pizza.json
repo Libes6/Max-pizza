@@ -1,0 +1,137 @@
+[
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/9/5/6/item_956/small_shop_items_956.jpg",
+        "name": "Пицца полу сыр ",
+        "price": "858"
+        
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/9/1/9/item_919/small_item_919.jpg",
+        "name": "Пицца Неаполь",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/8/1/8/item_818/small_item_818.jpg",
+        "name": "Пицца 4 вкуса ",
+        "price": "869"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/8/6/6/item_866/small_item_866.jpg",
+        "name": "Пицца Суперцезарь",
+        "price": "499"
+    },
+    {"sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/2/9/1/item_291/small_item_291.jpg",
+        "name": "Пицца Маргарита ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],"uri": "https://good-street-food.ru/upload/shop_3/2/9/2/item_292/small_item_292.jpg",
+        "name": "Пицца Манхеттен ",
+        "price": "469"
+    },
+    {"sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/7/2/9/item_729/small_item_729.jpg",
+        "name": "Пицца Цыпленок Терияки ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],"uri": "https://good-street-food.ru/upload/shop_3/2/9/3/item_293/small_item_293.jpg",
+        "name": "Пицца Сицилия ",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/2/9/4/item_294/small_item_294.jpg",
+        "name": "Пицца Венеция ",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/2/9/5/item_295/small_item_295.jpg",
+        "name": "Пицца Цыпленок Барбекю ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/2/9/8/item_298/small_item_298.jpg",
+        "name": "Пицца Пепперони",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/5/6/2/item_562/small_item_562.jpg",
+        "name": "Пицца Флоренция ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/2/9/9/item_299/small_item_299.jpg",
+        "name": "Пицца Мексиканская острая ",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/0/item_300/small_item_300.jpg",
+        "name": "Пицца Гавайская ",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/1/item_301/small_item_301.jpg",
+        "name": "Пицца Американо ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/2/item_302/small_item_302.jpg",
+        "name": "Пицца Вегетарианская ",
+        "price": "439"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/4/item_304/small_item_304.jpg",
+        "name": "Пицца Супермясная ",
+        "price": "469"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/5/item_305/small_item_305.jpg",
+        "name": "Кальцоне Гавайи ",
+        "price": "359"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/6/item_306/small_item_306.jpg",
+        "name": "Кальцоне Мясной ",
+        "price": "359"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/3/0/7/item_307/small_item_307.jpg",
+        "name": "Кальцоне Грибной",
+        "price": "359"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/5/5/8/item_558/small_item_558.jpg",
+        "name": "Кальцоне с фаршем и грибами",
+        "price": "359"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/5/6/0/item_560/small_item_560.jpg",
+        "name": "Кальцоне с фаршем и беконом ",
+        "price": "359"
+    },
+    {
+        "sizes":[25,30,40],
+        "uri": "https://good-street-food.ru/upload/shop_3/9/3/0/item_930/small_item_930.jpg",
+        "name": "Сырные палочки",
+        "price": "419"
+    }
+]
