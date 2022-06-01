@@ -112,7 +112,7 @@ function Content(){
         },
         {
             "uri": "https://good-street-food.ru/upload/shop_3/9/3/0/item_930/small_item_930.jpg",
-            "name": "Сырные палочки",
+            "name": "Сырные палочки 4 сыра",
             "price": "419"
         }
     ]
