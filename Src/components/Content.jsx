@@ -21,6 +21,13 @@ function Content(){
             mony: "550",
             uri:"https://i.pinimg.com/originals/87/94/01/8794015f7ba5befdc8f07e1665554dc4.gif "
         }
+        ,
+        {
+            id: 4,
+            name: "Ветчина и грибы",
+            mony: "550",
+            uri:"https://i.pinimg.com/originals/87/94/01/8794015f7ba5befdc8f07e1665554dc4.gif "
+        }
     ]
 
 let res =pizz.map(function(item){
