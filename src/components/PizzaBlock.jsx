@@ -3,10 +3,12 @@
 function PizzaBlock(props){
     return(
         <div class="pizza-block">
-  <img
+  <img 
   class="pizza-block__image"
   src={props.uri}
   alt="Pizza"
+  width="350"
+   height="250"
   />
   <h4 class="pizza-block__title">{props.name}</h4>
   <div class="pizza-block__selector">

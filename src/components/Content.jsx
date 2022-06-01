@@ -5,31 +5,33 @@ function Content(){
         {
             name: "Максимальная",
             mony: "550",
-            uri:"https://dodopizza-a.akamaihd.net/static/Img/Products/7a8164f7c43646e19c20001eaec9b031_366x366.jpeg"
+            uri:"https://media1.tenor.com/images/910ca8939c7dac3b14165f5ef3098614/tenor.gif?itemid=7741273"
         },
         {
-            name: "Ветчина и грибы",
+            name: "Билли чикен",
             mony: "550",
-            uri:"https://dodopizza-a.akamaihd.net/static/Img/Products/aa845b6e841241fbbff1a770b3ad3103_366x366.jpeg"
+            uri:"https://c.tenor.com/vYNl9ddWxHQAAAAd/gachi-billy.gif"
         }
         ,
         {
             name: "Ветчина и грибы",
             mony: "550",
-            uri:"https://dodopizza-a.akamaihd.net/static/Img/Products/aa845b6e841241fbbff1a770b3ad3103_366x366.jpeg"
+            uri:"https://i.pinimg.com/originals/87/94/01/8794015f7ba5befdc8f07e1665554dc4.gif "
         }
     ]
 
-    function Piza(){
-        for(let i=0; i<pizz.length; i++){
-           return <PizzaBlock uri={pizz[i].uri} name={pizz[i].name} mony={pizz[i].mony}/>   
-        }
-    }
+   
     return(      
   <div class="content__items">
 
       
-        <Piza/>
+  <PizzaBlock uri={pizz[0].uri} name={pizz[0].name} mony={pizz[0].mony}/>  
+  <PizzaBlock uri={pizz[1].uri} name={pizz[1].name} mony={pizz[1].mony}/>  
+  <PizzaBlock uri={pizz[2].uri} name={pizz[2].name} mony={pizz[2].mony}/> 
+  <PizzaBlock uri={pizz[0].uri} name={pizz[0].name} mony={pizz[0].mony}/>  
+  <PizzaBlock uri={pizz[1].uri} name={pizz[1].name} mony={pizz[1].mony}/>  
+  <PizzaBlock uri={pizz[2].uri} name={pizz[2].name} mony={pizz[2].mony}/> 
+  
       
       
 
