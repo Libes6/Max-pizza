@@ -3,33 +3,21 @@ import PizzaBlock from "./PizzaBlock"
 function Content(){
     let pizz =[
         {
-<<<<<<< HEAD:src/components/Content.jsx
             id: 1,
             name: "Максимальная",
-=======
-            name: "Желтая",
->>>>>>> 342b37f2568c04e0482b04fecd5184abaaa790ee:Src/Компоненты/Content.jsx
             mony: "550",
             uri:"https://media1.tenor.com/images/910ca8939c7dac3b14165f5ef3098614/tenor.gif?itemid=7741273"
         },
         {
-<<<<<<< HEAD:src/components/Content.jsx
             id: 2,
             name: "Билли чикен",
-=======
-            name: "Белая",
->>>>>>> 342b37f2568c04e0482b04fecd5184abaaa790ee:Src/Компоненты/Content.jsx
             mony: "550",
             uri:"https://c.tenor.com/vYNl9ddWxHQAAAAd/gachi-billy.gif"
         }
         ,
         {
-<<<<<<< HEAD:src/components/Content.jsx
             id: 3,
             name: "Ветчина и грибы",
-=======
-            name: "Черная",
->>>>>>> 342b37f2568c04e0482b04fecd5184abaaa790ee:Src/Компоненты/Content.jsx
             mony: "550",
             uri:"https://i.pinimg.com/originals/87/94/01/8794015f7ba5befdc8f07e1665554dc4.gif "
         }
