@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
 
-function PizzaBlock({uri,name,mony}){
+function PizzaBlock({uri,name,price,sizes,types}){
+    const typeName =['Тонкое','Традиционное']
+    const [activeType,setActiveType]= React.useState(0)
+    const [activeSize,setActiveSize]= React.useState(0)
+
     const [Pizzacount,setPizzacount]= useState(0)
     return(
         <div class="pizza-block">
@@ -14,17 +18,20 @@ function PizzaBlock({uri,name,mony}){
   <h4 class="pizza-block__title">{name}</h4>
   <div class="pizza-block__selector">
   <ul>
-  <li>тонкое</li>
-  <li>традиционное</li>
+  {
+          types.map(type =><li onClick={()=>setActiveType(type)} className={activeType ==type ? 'active' : ''}>{typeName[type]}</li>)
+      }
   </ul>
   <ul>
-  <li>26 см.</li>
-  <li>30 см.</li>
-  <li>40 см.</li>
+      {
+          sizes.map((size,i) =><li onClick={()=>setActiveSize(i)} className={activeSize ==i ? 'active' : ''}>{size} см.</li>)
+      }
+  
+ 
   </ul>
   </div>
   <div class="pizza-block__bottom">
-  <div class="pizza-block__price">от {mony} ₽</div>
+  <div class="pizza-block__price">от {price} ₽</div>
   <button onClick={()=>{setPizzacount(Pizzacount+1)}} class="button button--outline button--add">
   <svg
   width="12"

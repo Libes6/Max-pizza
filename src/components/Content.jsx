@@ -4,7 +4,8 @@ function Content({items}){
 
 
 let res =items.map(function(item){
-  return  <PizzaBlock uri={item.uri} name={item.name} mony={item.price}/>
+//   return  <PizzaBlock uri={item.uri} name={item.name} mony={item.price} sizes={item.sizes} types={item.types} />
+return  <PizzaBlock {...item} />
 })
     return(      
   <div class="content__items">
