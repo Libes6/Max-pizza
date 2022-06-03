@@ -3,12 +3,12 @@ import PizzaBlock from "./PizzaBlock"
 function Content({items}){
 
 
-let res =items.map(function(item){
+let res =items.map(function(item,i){
 //   return  <PizzaBlock uri={item.uri} name={item.name} mony={item.price} sizes={item.sizes} types={item.types} />
-return  <PizzaBlock {...item} />
+return  <PizzaBlock key={i} {...item} />
 })
     return(      
-  <div class="content__items">
+  <div className="content__items">
 
       
   {res}
