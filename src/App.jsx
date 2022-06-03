@@ -9,17 +9,33 @@ import Sort from './components/Sort'
 import pizzas from './assets/pizza.json'
 
 function App() {
+
+const[items,setItems] = React.useState([])
+
+React.useEffect(() =>{
+
+fetch('https://629a283d6f8c03a97851d8dc.mockapi.io/items')
+.then(res=>{
+    return res.json()
+  })
+  .then((json) => {
+    setItems(json)
+  });
+
+},[])
+
+  
   return (
-    <div class="wrapper">
+    <div className="wrapper">
    <Header/>
-    <div class="content">
-      <div class="container">
-        <div class="content__top">
+    <div className="content">
+      <div className="container">
+        <div className="content__top">
           <Categories/>
          <Sort/>
         </div>
-        <h2 class="content__title">Все пиццы</h2>
-        <Content items={pizzas}/>
+        <h2 className="content__title">Все пиццы</h2>
+        <Content items={items}/>
       </div>
     </div>
   </div>
