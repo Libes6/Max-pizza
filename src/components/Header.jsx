@@ -8,7 +8,7 @@ function Header(){
         <img width="38" src={logo} alt="" />
           <div>
             <h1>React Pizza</h1>
-            <p>самая вкусная пицца во вселенной</p>
+            <p>самая  самая вкусная пицца во вселенной</p>
           </div>
         </div>
         
