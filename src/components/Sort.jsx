@@ -29,7 +29,7 @@ function Sort(){
           fill="#2C2C2C"
         />
       </svg>
-      <b>Сортировка по:</b>
+      <b>Сортировка по :</b>
       <span onClick={()=>{setOpen(!open)}}>{list[select]}</span>
     </div>
     {open &&(
@@ -40,7 +40,7 @@ function Sort(){
             <li
             key={i}
             onClick={()=>{onClickItem(i)}}
-            className ={select ==i ? 'active' :''}
+            className ={select === i ? 'active' :''}
             >{name}</li>
           ))
         }
