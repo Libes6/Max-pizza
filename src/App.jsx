@@ -7,7 +7,7 @@ import Categories from './components/Categories'
 import Content from './components/Content'
 import Sort from './components/Sort'
 import pizzas from './assets/pizza.json'
-
+import PizzaBlock from './components/PizzaBlock';
 function App() {
 
 const[items,setItems] = React.useState([])
@@ -36,6 +36,8 @@ fetch('https://629a283d6f8c03a97851d8dc.mockapi.io/items')
         </div>
         <h2 className="content__title">Все пиццы</h2>
         <Content items={items}/>
+    
+        
       </div>
     </div>
   </div>
