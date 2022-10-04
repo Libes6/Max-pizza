@@ -8,7 +8,8 @@ function Content({ items }) {
     <div className="content__items">
 
       {
-       isLoading ?  [...new Array(6 )].map(()=><Placeholder/>) : items.map((obj)=><PizzaBlock key={obj.id} {...obj}/>) 
+       isLoading ?  [...new Array(6 )].map(()=><Placeholder/>)
+        : items.map((obj)=><PizzaBlock key={obj.id} {...obj}/>) 
       }
       {/* {items.map((item, i) => ( isLoading ? <Placeholder/> : items
 
