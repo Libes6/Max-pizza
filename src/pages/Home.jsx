@@ -6,7 +6,7 @@ import Sort from "../components/Sort";
 import PizzaBlock from "../components/PizzaBlock";
 import Placeholder from "../components/Placeholder";
 
- const Home = () => {
+const Home = () => {
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -21,7 +21,7 @@ import Placeholder from "../components/Placeholder";
       });
   }, []);
   return (
-    <>
+    <div className="container">
       <div className="content__top">
         <Categories />
         <Sort />
@@ -32,7 +32,7 @@ import Placeholder from "../components/Placeholder";
           ? [new Array(6)].map(() => <Placeholder />)
           : items.map((obj) => <PizzaBlock key={obj.id} {...obj} />)}
       </div>
-    </>
+    </div>
   );
 };
 export default Home;
