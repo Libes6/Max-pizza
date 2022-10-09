@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PizzaBlock({ uri, name, price, sizes, types }) {
+function PizzaBlock({ imageUrl, name, price, sizes, types }) {
   const typeName = ["Тонкое", "Традиционное"];
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
@@ -10,7 +10,7 @@ function PizzaBlock({ uri, name, price, sizes, types }) {
     <div className="pizza-block">
       <img
         className="pizza-block__image"
-        src={uri}
+        src={imageUrl}
         alt="Pizza"
         width="260"
         height="260"
