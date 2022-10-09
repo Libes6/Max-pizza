@@ -23,7 +23,7 @@ const Home = () => {
   React.useEffect(() => {
     setIsLoading(true);
     fetch(
-      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${curent}&limit=5&${categoryId > 0 ? `category=${categoryId}` : ""}&sortBy=${sort.sort}&order=${ascSort}`
+      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${curent}&limit=23&${categoryId > 0 ? `category=${categoryId}` : ""}&sortBy=${sort.sort}&order=${ascSort}`
     )
       .then((res) => {
         return res.json();
