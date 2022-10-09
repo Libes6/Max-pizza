@@ -1,41 +1,38 @@
-.root{
-margin: 0 auto;
-align-items: center;
-display: flex;
-justify-content: center;
-   li{
-&:global{
+
+.root {
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     
-    &.selected{
-        background-color: #fe5f1e;
-        color: #fff;
-    }
-}
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid #fe5f1e;
-    border-radius: 40px;
-    margin: 0 5px;
-    font-size: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-
- &:hover{
-    background-color: #fe5f1e;
-   
-    a{
-        color: #fff;
-    }
-
- }
-
-    }
-    a{
+    li {
+      display: inline-block;
+  justify-content: center;
+      a {
+        text-align: center;
+        width: 45px;
+        line-height: 42px;
+        height: 45px;
+        border: 1px solid #fe5f1e;
+        border-radius: 30px;
+        margin-right: 10px;
+        cursor: pointer;
         display: inline-block;
+        color: #fe5f1e;
+  
+        &:hover {
+          background-color: #fe5f1e;
+          color: #fff;
+        }
+      }
     }
-    
-   }
-
+  
+    :global {
+      .selected {
+        a {
+          background-color: #fe5f1e;
+          color: #fff;
+        }
+      }
+    }
+  }

@@ -5,12 +5,16 @@ import Sort from "../components/Menu/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 import Placeholder from "../components/PizzaBlock/Placeholder";
 import Pagination from "../components/Pagination/Index"
+import {AppContex} from "../App"
 
-const Home = ({ searchValue }) => {
+const Home = () => {
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [categoryId, setCategoryId] = React.useState(0);
   const [ascSort, setAscSort] = React.useState("asc");
+  const [curent, setCurent] = React.useState(1);
+  const {searchValue,setSearchValue} =React.useContext(AppContex)
+
   const [sort, setSort] = React.useState({
     name: "Популярности",
     sort: "rating",
@@ -19,9 +23,7 @@ const Home = ({ searchValue }) => {
   React.useEffect(() => {
     setIsLoading(true);
     fetch(
-      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?${
-        categoryId > 0 ? `category=${categoryId}` : ""
-      }&sortBy=${sort.sort}&order=${ascSort}`
+      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${curent}&limit=5&${categoryId > 0 ? `category=${categoryId}` : ""}&sortBy=${sort.sort}&order=${ascSort}`
     )
       .then((res) => {
         return res.json();
@@ -31,7 +33,8 @@ const Home = ({ searchValue }) => {
         console.log(json);
         setIsLoading(false);
       });
-  }, [categoryId, sort,searchValue ]);
+      window.scrollTo(0,0);
+  }, [categoryId, sort,searchValue,curent ]);
 
   const pizzas = items
     .filter((obj) => {
@@ -60,7 +63,7 @@ const Home = ({ searchValue }) => {
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
-      <Pagination/>
+      <Pagination curent={curent} setCurent={setCurent}/>
     </div>
   );
 };

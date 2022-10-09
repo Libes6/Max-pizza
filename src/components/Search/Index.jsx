@@ -2,9 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch,faClose } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Search.module.scss";
+import {AppContex} from "../../App"
 
-const Search = ({searchValue, setSearchValue}) => {
-
+const Search = () => {
+const {searchValue,setSearchValue} =React.useContext(AppContex)
   return (
     
     <div className={styles.root}>
