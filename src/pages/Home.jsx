@@ -4,8 +4,9 @@ import Categories from "../components/Menu/Categories";
 import Sort from "../components/Menu/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 import Placeholder from "../components/PizzaBlock/Placeholder";
+import Pagination from "../components/Pagination/Index"
 
-const Home = () => {
+const Home = ({ searchValue }) => {
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [categoryId, setCategoryId] = React.useState(0);
@@ -30,7 +31,18 @@ const Home = () => {
         console.log(json);
         setIsLoading(false);
       });
-  }, [categoryId, sort]);
+  }, [categoryId, sort,searchValue ]);
+
+  const pizzas = items
+    .filter((obj) => {
+      if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+        return true;
+      }
+      return false;
+    })
+    .map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+
+  const skeletons = [new Array(6)].map(() => <Placeholder />);
 
   return (
     <div className="container">
@@ -47,11 +59,8 @@ const Home = () => {
         />
       </div>
       <h2 className="content__title">Все пиццы</h2>
-      <div className="content__items">
-        {isLoading
-          ? [new Array(6)].map(() => <Placeholder />)
-          : items.map((obj) => <PizzaBlock key={obj.id} {...obj} />)}
-      </div>
+      <div className="content__items">{isLoading ? skeletons : pizzas}</div>
+      <Pagination/>
     </div>
   );
 };

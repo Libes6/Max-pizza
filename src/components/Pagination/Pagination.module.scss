@@ -1,0 +1,41 @@
+.root{
+margin: 0 auto;
+align-items: center;
+display: flex;
+justify-content: center;
+   li{
+&:global{
+    
+    &.selected{
+        background-color: #fe5f1e;
+        color: #fff;
+    }
+}
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #fe5f1e;
+    border-radius: 40px;
+    margin: 0 5px;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+
+ &:hover{
+    background-color: #fe5f1e;
+   
+    a{
+        color: #fff;
+    }
+
+ }
+
+    }
+    a{
+        display: inline-block;
+    }
+    
+   }
+
