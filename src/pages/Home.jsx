@@ -30,7 +30,7 @@ const Home = () => {
       })
       .then((json) => {
         setItems(json);
-        console.log(json);
+        // console.log(json);
         setIsLoading(false);
       });
       window.scrollTo(0,0);

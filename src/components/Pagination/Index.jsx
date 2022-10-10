@@ -5,7 +5,7 @@ import style from "./Pagination.module.scss";
 const Index = ({curent,setCurent}) => {
 
   const onChange = (page) => {
-    console.log(page);
+    // console.log(page);
     setCurent(page);
   };
 
