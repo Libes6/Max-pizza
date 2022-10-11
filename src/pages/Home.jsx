@@ -1,16 +1,20 @@
 import React from "react";
-
+import {useSelector} from "react-redux"
 import Categories from "../components/Menu/Categories";
 import Sort from "../components/Menu/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 import Placeholder from "../components/PizzaBlock/Placeholder";
 import Pagination from "../components/Pagination/Index"
 import {AppContex} from "../App"
-
+const setCategoryId = ()=>{
+  
+}
 const Home = () => {
+  const categoryId = useSelector(state =>state.filter.categoryId);
+  console.log(`заглушка ${categoryId}`)
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [categoryId, setCategoryId] = React.useState(0);
+  //  const [categoryId, setCategoryId] = React.useState(0);
   const [ascSort, setAscSort] = React.useState("asc");
   const [curent, setCurent] = React.useState(1);
   const {searchValue,setSearchValue} =React.useContext(AppContex)
