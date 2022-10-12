@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import {setCategoryId} from "../redux/filter/filterSlice"
+import {setCategoryId, setPageCount} from "../redux/filter/filterSlice"
 
 import Categories from "../components/Menu/Categories";
 import Sort from "../components/Menu/Sort";
@@ -11,24 +11,27 @@ import Pagination from "../components/Pagination/Index";
 import { AppContex } from "../App";
 
 const Home = () => {
-  const {categoryId} = useSelector((state) => state.filter.categoryId);
+  const categoryId = useSelector((state) => state.filter.categoryId);
   const sort = useSelector((state) => state.filter.sort);
+  const counterPage = useSelector((state)=>state.filter.pageCount)
   const dispatch = useDispatch();
-  console.log(categoryId);
+  // console.log(categoryId);
 
 
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   //  const [categoryId, setCategoryId] = React.useState(0);
   const [ascSort, setAscSort] = React.useState("asc");
-  const [curent, setCurent] = React.useState(1);
+  // const [curent, setCurent] = React.useState(1);
   const { searchValue, setSearchValue } = React.useContext(AppContex);
 
   // const [sort, setSort] = React.useState({
   //   name: "Популярности",
   //   sort: "rating",
   // });
-
+  const onChangePage =(id)=>{
+    dispatch(setPageCount(id))
+  }
   const onChangeCategory =(id)=>{
     dispatch(setCategoryId(id))
   }
@@ -36,7 +39,7 @@ const Home = () => {
   React.useEffect(() => {
     setIsLoading(true);
     fetch(
-      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${curent}&limit=8&${
+      `https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${counterPage}&limit=8&${
         categoryId > 0 ? `category=${categoryId}` : ""
       }&sortBy=${sort.sort}&order=${ascSort}`
     )
@@ -49,7 +52,7 @@ const Home = () => {
         setIsLoading(false);
       });
     window.scrollTo(0, 0);
-  }, [categoryId, sort, searchValue, curent]);
+  }, [categoryId, sort, searchValue, counterPage]);
 
   const pizzas = items
     .filter((obj) => {
@@ -78,7 +81,7 @@ const Home = () => {
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
-      <Pagination curent={curent} setCurent={setCurent} />
+      <Pagination curent={counterPage} setCurent={onChangePage} />
     </div>
   );
 };
