@@ -15,20 +15,12 @@ const Home = () => {
   const sort = useSelector((state) => state.filter.sort);
   const counterPage = useSelector((state)=>state.filter.pageCount)
   const dispatch = useDispatch();
-  // console.log(categoryId);
-
 
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
-  //  const [categoryId, setCategoryId] = React.useState(0);
   const [ascSort, setAscSort] = React.useState("asc");
-  // const [curent, setCurent] = React.useState(1);
   const { searchValue, setSearchValue } = React.useContext(AppContex);
 
-  // const [sort, setSort] = React.useState({
-  //   name: "Популярности",
-  //   sort: "rating",
-  // });
   const onChangePage =(id)=>{
     dispatch(setPageCount(id))
   }

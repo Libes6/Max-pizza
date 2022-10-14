@@ -1,3 +1,4 @@
+import { includes } from "lodash";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSort } from "../../redux/filter/filterSlice";
@@ -12,14 +13,27 @@ function Sort() {
     { name: "алфавиту", sort: "title" },
   ];
 
-  // const [select,setSelect] =React.useState(0)
+  const sortRef = React.useRef();
+
   const onClickItem = (i) => {
     dispatch(setSort(i));
     setOpen(false);
   };
-  // onClick={alert("Сменилось")}
+
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.path.includes(sortRef.current)) {
+        console.log("first");
+      }
+    };
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
   return (
-    <div class="sort">
+    <div ref={sortRef} class="sort">
       <div class="sort__label">
         <span
           onClick={() => {
