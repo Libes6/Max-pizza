@@ -90,7 +90,7 @@ const onClickClear = ()=>{
       <b>{price*count} ₽</b>
     </div>
     <div onClick={()=>onClickRemove(id)} className="cart__item-remove">
-      <button  className="button--circle" outline>
+      <button  className="button button--outline button--circle" outline>
         <svg
           width="10"
           height="10"

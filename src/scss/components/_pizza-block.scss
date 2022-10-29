@@ -4,7 +4,8 @@
   width: 280px;
   text-align: center;
   margin-bottom: 65px;
-  transition: all 0.2s ease-in-out;
+  transition: all .3s ease-in-out;
+
 
   &:hover {
     transform: scale(1.03);
@@ -27,6 +28,7 @@
   }
 
   &__selector {
+
     display: flex;
     background-color: #f3f3f3;
     border-radius: 10px;
@@ -34,6 +36,7 @@
     padding: 6px;
 
     ul {
+      margin-bottom: 1px;
       display: flex;
       flex: 1;
 
@@ -42,6 +45,8 @@
       }
 
       li {
+        transition: all .2s ease-in-out;
+
         padding: 8px;
         flex: 1;
         cursor: pointer;
@@ -56,6 +61,11 @@
         }
       }
     }
+  }
+
+  .pizza-block__selector{
+    transition: all 5s ease-in-out;
+
   }
 
   &__bottom {
