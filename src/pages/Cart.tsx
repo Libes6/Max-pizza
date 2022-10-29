@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import cartImg from '../assets/img/empty-cart.png'
 import { clearItem } from '../redux/cart/cartSlice'
 import CartItem from '../components/Cart/CartItem'
-
+import { DeleteOutlined } from '@ant-design/icons'
 const Cart: React.FC = () => {
 	const { items, totalPrice } = useSelector((state: any) => state.cart)
 	const totalCount = items.reduce(
@@ -25,6 +25,7 @@ const Cart: React.FC = () => {
 							onClick={() => dispatch(clearItem(''))}
 							className='cart__clear'
 						>
+							<DeleteOutlined />
 							<span>Очистить корзину</span>
 						</div>
 					</div>
@@ -65,7 +66,8 @@ const Cart: React.FC = () => {
 					<p>
 						Вероятней всего, вы не заказывали ещё пиццу.
 						<br />
-						Для того, чтобы заказать пиццу, перейди на главную страницу.
+						Для того, чтобы заказать пиццу, перейди на главную
+						страницу.
 					</p>
 					<img src={cartImg} alt='Empty cart' />
 					<Link to='/' className='button button--black'>

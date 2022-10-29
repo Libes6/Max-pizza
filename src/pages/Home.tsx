@@ -11,30 +11,31 @@ import Pagination from '../components/Pagination/Index'
 import { AppContex } from '../App'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
-	const categoryId = useSelector((state) => state.filter.categoryId)
-	const sort = useSelector((state) => state.filter.sort)
-	const counterPage = useSelector((state) => state.filter.pageCount)
+const Home: React.FC = () => {
+	const categoryId = useSelector((state: any) => state.filter.categoryId)
+	const sort = useSelector((state: any) => state.filter.sort)
+	// const counterPage = useSelector((state: any) => state.filter.pageCount)
+	const { pageCount, searchValue } = useSelector((state: any) => state.filter)
 	const dispatch = useDispatch()
 
 	const [items, setItems] = React.useState([])
 	const [isLoading, setIsLoading] = React.useState(true)
 	const [ascSort, setAscSort] = React.useState('asc')
-	const { searchValue, setSearchValue } = React.useContext(AppContex)
+	// const { searchValue, setSearchValue } = React.useContext(AppContex)
 
-	const onChangePage = (id) => {
+	const onChangePage = (id: number) => {
 		dispatch(setPageCount(id))
 	}
-	const onChangeCategory = (id) => {
+	const onChangeCategory = (id: number) => {
 		dispatch(setCategoryId(id))
 	}
 
 	React.useEffect(() => {
 		setIsLoading(true)
 		fetch(
-			`https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${counterPage}&limit=8&${
+			`https://629a283d6f8c03a97851d8dc.mockapi.io/pizzas?page=${pageCount}&limit=8&${
 				categoryId > 0 ? `category=${categoryId}` : ''
-			}&sortBy=${sort.sort}&order=${ascSort}`
+			}&sortBy=${sort.sort}&order=${ascSort}&search=${searchValue}`
 		)
 			.then((res) => {
 				return res.json()
@@ -45,9 +46,9 @@ const Home = () => {
 				setIsLoading(false)
 			})
 		window.scrollTo(0, 0)
-	}, [categoryId, sort, searchValue, counterPage])
+	}, [categoryId, sort, searchValue, pageCount])
 
-	const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />)
+	const pizzas = items.map((obj: any) => <PizzaBlock key={obj.id} {...obj} />)
 
 	// .filter((obj) => {
 	// 	if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
@@ -65,16 +66,13 @@ const Home = () => {
 					value={categoryId}
 					onClickCategoryId={(id) => onChangeCategory(id)}
 				/>
-				<Sort
-					value={sort}
-					// setSort={(id) => setSort(id)}
-					asc={ascSort}
-					setAscSort={() => setAscSort('desc')}
-				/>
+				<Sort />
 			</div>
 			<h2 className='content__title'>Все пиццы</h2>
-			<div className='content__items'>{isLoading ? skeletons : pizzas}</div>
-			<Pagination curent={counterPage} setCurent={onChangePage} />
+			<div className='content__items'>
+				{isLoading ? skeletons : pizzas}
+			</div>
+			<Pagination curent={pageCount} setCurent={onChangePage} />
 		</div>
 	)
 }

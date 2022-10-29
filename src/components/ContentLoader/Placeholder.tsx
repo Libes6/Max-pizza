@@ -1,7 +1,7 @@
 import React from 'react'
 import ContentLoader from 'react-content-loader'
 
-const Placeholder = (props) => (
+const Placeholder = (props: any) => (
 	<ContentLoader
 		speed={2}
 		width={280}
